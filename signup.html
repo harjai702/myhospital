@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+#mylogo{ width:8%;
+  height:8%;}
+#back2{background-image:url("findadoc.png");background-repeat:no-repeat;background-size:cover;opacity:0.9;}
+#part3{background-image:url("map.png");background-repeat:no-repeat;background-size:cover;opacity:0.8;}
+    </style>
+    <script>
+      $(document).ready(function(){
+      $('#b').click(function(){
+        var i1=$('#i1').val();
+        var i2=$('#i2').val();
+        var i3=$('#i3').val();
+        var i4=$('#i4').val();
+        var i5=$('#i5').val();
+        if(i1=="")
+        {
+          $('#d1').empty();
+         $('#d1').append("<div class='alert alert-warning' style='text-align:left;width:100%;'>Please enter the Email address</div>");
+        }
+        if(i1!=""&&i2=="")
+        {
+         $('#d1').empty();
+         $('#d2').empty();
+         $('#d2').append("<div class='alert alert-warning' style='text-align:left;width:100%;'>Please re-enter the Email address</div>");
+        }
+        if(i1!=""&&i2!=""&&i1!=i2)
+        {
+         $('#d1').empty();
+         $('#d2').empty(); 
+         $('#d2').append("<div class='alert alert-warning' style='text-align:left;width:100%;'>Email's don't match</div>");
+        }
+        if(i2!=""&&i1!=""&&i1==i2)
+        {
+          $('#d2').empty();
+        }
+        if(i3=="")
+        {
+           $('#d3').empty();
+         $('#d3').append("<div class='alert alert-warning' style='text-align:left;width:100%;'>Please enter the First Name</div>");
+        }
+        if(i3!=""&&i5=="")
+        {
+           $('#d3').empty();
+            $('#d4').empty();
+         $('#d4').append("<div class='alert alert-warning' style='text-align:left;width:100%;'>Please enter the Last Name</div>");
+        }
+        if(i1!=""&&i2!=""&&i1==i2&&i3!=""&&i5!="")
+        {
+           $('#d1').empty();
+            $('#d2').empty();
+             $('#d3').empty();
+              $('#d4').empty();
+             $("#myModal").modal('show');
+        }
+      });
+      });
+    </script>
+  </head>
+  <body ng-app="">
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+      <div class="modal-body">
+        <h3 style="color:green;">Account Created Successfully <span class="glyphicon glyphicon-ok"></span></h3></div>
+        <hr style="border: 1px solid #b8b894;" />
+        <center><h4>
+          Your login id and Password has been mailed you.
+        </h4></center><br>
+    </div>
+  </div></div>
+              <center><img src="mayologo.png" id="mylogo"></center>
+              <center><h1 style="color:#adad85;">My Hospital</h1></center>
+             <center><h3 style="color:#adad85;">One account for all My Hospital services</h3></center>
+             <center><h4 style="color:#adad85;"><span><b>Please note:</b></span> Fields marked with <span style="color:red;">*</span> are compulsary to fill.</h4></center>
+             <div class="container"><hr style="border: 1px solid #b8b894;" />
+             <h3 style="text-align:left;"><b>Primary e-mail address: <span style="color:red;">*</span></b></h3>
+                 <input type="email" class="form-control input-lg" placeholder="E-mail" style="width:45%" id="i1"></input><div id="d1" style="width:45%;"></div>
+                 <h3 style="text-align:left;"><b>Re-type e-mail address: <span style="color:red;">*</span></b></h3>
+                 <input type="email" class="form-control input-lg" placeholder="Re-type E-mail" style="width:45%" id="i2"></input><div id="d2" style="width:45%;"></div>
+                 <h3 style="text-align:left;"><b>Legal First Name: <span style="color:red;">*</span></b></h3>
+                 <input type="text" class="form-control input-lg" placeholder="First Name" style="width:45%" id="i3"></input><div id="d3" style="width:45%;"></div>
+                 <h3 style="text-align:left;"><b>Legal Middle Name:</b></h3>
+                 <input type="text" class="form-control input-lg" placeholder="Middle Name" style="width:45%" id="i4"></input>
+                 <h3 style="text-align:left;"><b>Legal Last Name: <span style="color:red;">*</span></b></h3>
+                 <input type="Text" class="form-control input-lg" placeholder="Last Name" style="width:45%" id="i5"></input><div id="d4" style="width:45%;"></div>
+                  <br><h3 style="text-align:left;"><b>Date of Birth: <span style="color:red;">*</span></b></h3>
+                 <select class="form-control" style="width:15%">
+                 <option>Month:</option>
+                 <option>January</option>
+                 <option>February</option>
+                 <option>March</option>
+                 <option>April</option>
+                 <option>May</option>
+                 <option>June</option>
+                 <option>July</option>
+                 <option>August</option>
+                 <option>September</option>
+                 <option>October</option>
+                 <option>November</option>
+                 <option>December</option>
+               </select><br>
+               <select class="form-control" style="width:15%">
+                 <option>Day:</option>
+                 <option>01</option>
+                 <option>02</option>
+                 <option>03</option>
+                 <option>04</option>
+                 <option>05</option>
+                 <option>06</option>
+                 <option>07</option>
+                 <option>08</option>
+                 <option>09</option>
+                 <option>10</option>
+                 <option>11</option>
+                 <option>12</option>
+                 <option>13</option>
+                 <option>14</option>
+                 <option>15</option>
+                 <option>16</option>
+                 <option>17</option>
+                 <option>18</option>
+                 <option>19</option>
+                 <option>20</option>
+                 <option>21</option>
+                 <option>22</option>
+                 <option>23</option>
+                 <option>24</option>
+                 <option>25</option>
+                 <option>26</option>
+                 <option>27</option>
+                 <option>28</option>
+                 <option>29</option>
+                 <option>30</option>
+                 <option>31</option>
+               </select>
+               <br>
+               <select class="form-control" style="width:15%">
+                <option>Year:</option>
+                 <option>2019</option>
+                 <option>2018</option>
+                 <option>2017</option>
+                 <option>2016</option>
+                 <option>2015</option>
+                 <option>2014</option>
+                 <option>2013</option>
+                 <option>2012</option>
+                 <option>2011</option>
+                 <option>2010</option>
+                 <option>2009</option>
+                 <option>2008</option>
+                 <option>2007</option>
+                 <option>2006</option>
+                 <option>2005</option>
+                 <option>2004</option>
+                 <option>2003</option>
+                 <option>2002</option>
+               </select><br>
+               <input type="checkbox" ng-model="lk"><label><h4>&nbsp&nbspAgree all terms and conditions!</h4></label><br>
+                              <button type="button" ng-disabled="!lk" class="btn btn-success btn-block" style="height:50px;" id="b"><h4><b>Create Account</b></h4></button><br><br><br><br>
+             </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

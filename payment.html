@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Donate for Cancer Patients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+#mylogo{ width:12%;
+  height:12%;}
+    </style>
+    </head>
+    <script>
+      $(document).ready(function(){
+        $('#po').click(function(){
+          $("#m").modal('show');
+        });
+      });
+    </script>
+    <body>
+      <div class="container" ng-app="">
+         <center><img src="done.png" id="mylogo"></center>
+              <center><h1 style="color:#adad85;">My Hospital</h1></center>
+              <center><h4 style="color:#adad85;"><span><b>Please note:</b></span> Fields marked with <span style="color:red;">*</span> are compulsary to fill.</h4></center>
+              <div class="container">
+                <hr style="border: 1px solid #b8b894;" />
+              <h2><b>Donation Information</b></h2><br>
+              <h4><b>Designate my donation to...</b></h4>
+              <select class="form-control" style="width:32%;">
+                <option>Greatest needs at my hospital</option>
+                <option>Cancer Research</option>
+                <option>My Hospital Hope Fund</option>
+                <option>Center for science Of Health</option>
+                <option>Others</option>
+              </select>
+              <h2><b>Amount(₹):<span style="color:red;"> *</span></b></h2>
+              <input type="number" class="form-control input-lg" style="width:32%" placeholder="Enter the Amount....">
+              <h2><b>Billing Information</b></h2><br>
+              <h4><b>Title:</b></h4>
+              <select class="form-control input-lg" style="width:32%;" ng-model="tite">
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Miss</option>
+                <option>Dr.</option>
+              </select>
+              <h4><b>First Name:<span style="color:red;"> *</span></b></h4>
+              <input type="text" class="form-control input-lg" style="width:32%" ng-model="fnam">
+              <h4><b>Last Name:<span style="color:red;"> *</span></b></h4>
+              <input type="text" class="form-control input-lg" style="width:32%" ng-model="lnam">
+              <h4><b>Country:<span style="color:red;"> *</span></b></h4>
+              <select class="form-control input-lg" style="width:32%;">
+                <option>India</option>
+                <option>China</option>
+                <option>Sri Lanka</option>
+                <option>Nepal</option>
+              </select>
+              <h4><b>Street Address:<span style="color:red;"> *</span></b></h4>
+              <input type="text" class="form-control input-lg" style="width:32%">
+              <h4><b>City:<span style="color:red;"> *</span></b></h4>
+              <input type="text" class="form-control input-lg" style="width:32%">
+              <h4><b>State:<span style="color:red;"> *</span></b></h4>
+              <input type="text" class="form-control input-lg" style="width:32%">
+              <h4><b>Postal Code:<span style="color:red;"> *</span></b></h4>
+              <input type="text" class="form-control input-lg" style="width:32%">
+              <h4><b>Mobile Number:<span style="color:red;"> *</span></b></h4>
+              <input type="number" class="form-control input-lg" style="width:32%">
+              <h4><b>Email Address:<span style="color:red;"> *</span></b></h4>
+              <input type="email" class="form-control input-lg" style="width:32%">
+              <br>
+              <button type="button" class="btn btn-lg btn-info" id="po">Submit</button>
+              <br>
+              <center><h5>© 1998-2019 MyH Foundation for Medical Education and Research (MFMER). All rights reserved</h5></center><br>
+            </div>
+             <div class="modal fade" id="m" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header"><h2>Payment done Successfully <span class="glyphicon glyphicon-ok" style="color:green;"></span></div>
+                  <div class="modal-body"><h3><i class="fa fa-heartbeat" style="font-size:42px;color:red"></i>Thank you {{tite}} {{fnam}} {{lnam}} for Donating</h3></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+               <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    </body>
+  </html>

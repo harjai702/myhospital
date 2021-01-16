@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Find a Doctor</title>
+    <link href="1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+#mylogo{ width: 180%;
+  height:20%;}
+#back2{background-image:url("findadoc.png");background-repeat:no-repeat;background-size:cover;opacity:0.9;}
+#part3{background-image:url("map.png");background-repeat:no-repeat;background-size:cover;opacity:0.8;}
+    </style>
+    <style>
+      .modal.left .modal-dialog,
+  .modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+  }
+
+  .modal.left .modal-content,
+  .modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .modal.left .modal-body,
+  .modal.right .modal-body {
+    padding: 15px 15px 80px;
+  }
+
+/*Left*/
+  .modal.left.fade .modal-dialog{
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+  }
+  
+  .modal.left.fade.in .modal-dialog{
+    left: 0;
+  }
+    </style>
+    <script>
+      $(document).ready(function(){
+      $('#find').keyup(function(){
+        var a=$('#find').val().toLowerCase();
+        if(a=="")
+        {
+          $('#d').empty();
+         $('#d').append("<div class='alert alert-danger' style='text-align:left;width:100%;'>Please enter the DOCTOR'S NAME, CONDITION OR Hospital Id.</div>");
+        }
+        if(a!="")
+        {
+          $('#d').empty();
+          $('#tab  tr').filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(a)>-1)
+          });
+        }
+      });
+      $('#po').click(function(){
+          $("#m").modal('show');
+        });
+      });
+    </script>
+  </head>
+  <script>
+    function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+$(document).ready(function(){
+$('#menu').click(function(){
+ $("#myModal").modal('show');
+});
+});
+  </script>
+  <body>
+             <div class="container" id="b">
+              <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"style=" background-color:black;opacity:0.9;">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel" style="color:white;">Menu</h4>
+        </div>
+
+        <div class="modal-body">
+         <div class="list-group">
+    <a href="1.html" class="list-group-item" style="background-color:black;color:white;"><span class="glyphicon glyphicon-home"></span> Home</a>
+    <a href="login.html" class="list-group-item" style="background-color:black;color:white;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+    <a href="#" class="list-group-item" style="background-color:black;color:white;"><span class="glyphicon glyphicon-hand-right"></span> About Us!</a>
+  </div>
+        </div>
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+               <div class="row">
+                <div class="col-lg-1">
+                  <center><img src="mayologo.png" id="mylogo"></center>
+                </div>
+                <div class="col-lg-2">
+                <center><h3>★·.·´¯`·.·★ ꎭꌩ ꃅꂦꌗᖘꀤ꓄ꍏ꒒ ★·.·´¯`·.·★</h3></center>
+                </div>
+                <div class="col-lg-1">
+                  <br>
+                  <button type="button" class="btn btn-info" id="menu" data-toggle="modal"><h3>Menu</h3></button>
+                </div>
+                <div class="col-lg-3">
+                  <br>
+                  <br>
+                <input type="text" placeholder="Search.. My Hospital" name="search" id="search">
+      <button type="submit" id="search"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="col-lg-1">
+                 <a href="https://twitter.com/"><img src="twitter.png" height="70px" id="twit"></a>
+                </div>
+                <div class="col-lg-1">
+                  <br>
+                 <a href="https://www.facebook.com/"><img src="facebook.png" height="60px" id="face"></a>
+                </div>
+                <div class="col-lg-1">
+                  <br>
+                  <br>
+                 <a href="https://www.instagram.com/"><img src="insta.png" height="60px" id="insta"></a>
+                </div>
+                <div class="col-lg-2">
+                  <br>
+                  <a href="reqapp.html"><h8>Request an Appointment</h8></a>
+                  <a href="findadoctor.html"><h8>Find a Doctor</h8></a><br>
+                  <a href="payment.html"><h8>Donate For Cancer Patients</h8></a>
+                </div>
+               </div>
+             </div>
+             <div class="well well-lg">
+              <div class="row">
+                <div class="col-lg-6">
+               <center><h4 style="color:#002b80">Departments & Centers</h4></center>
+               <center><h2 style="color:#002b80">Doctors and Medical Staff</h2></center>
+             </div>
+             <div class="col-lg-6"><center><a href="reqapp.html" class="btn btn-info" style="background-color:#002b80;padding-bottom:15px;"><h2><span class="glyphicon glyphicon-ok"></span> Request an Appointment</h2></a></center></div>
+           </div>
+         </div>
+         <div id="d"></div>
+         <div class="container-fluid" id="back2">
+          <br><br>
+          <div class="row">
+            <div class="col-lg-12">
+              <center><h1 style="color:black;"><span class="glyphicon glyphicon-search"></span>  Find a Doctor</h1></center>
+            </div>          
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-lg-6">
+              <center><h4 style="color:black;">DOCTOR'S NAME, CONDITION OR HOSPITAL Id.</h4></center>
+              <center><input type="text" class="form-control input-lg" placeholder="Type in your search term" style="width:60%;" id="find"></center>
+            </div>
+            <div class="col-lg-6">
+               <h4 style="color:black;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLOCATION</h4>
+              <center><select class="form-control input-lg" style="width:60%;">
+                <option>All Locations</option>
+                <option>Haryana</option>
+                <option>Punjab</option>
+                <option>Delhi</option>
+              </select></center>
+            </div>
+          </div>
+          <br><br><br>
+          <center><a href="#" class="btn btn-success" style="background-color:#002b80;padding-top:1px;padding-bottom:5px;" id="s"><h2><span class="glyphicon glyphicon-search"></span>  Search  </h2></a></center>
+          <br><br><br><br>
+         </div>
+         <br>
+         <table class="table table-striped table-border">
+           <thead>
+             <tr><th>Doctor's Name</th>
+             <th>Hospital Id.</th>
+             <th>Contact Number</th>
+             <th>Appointment</th></tr>
+           </thead>
+           <tbody id="tab">
+             <tr><th>Harsh Harjai</th><td>1810991152</td><td>7027028084</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Arnav Garg</th><td>1810991153</td><td>7027020984</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Vipin Sharma</th><td>1810991154</td><td>8827028084</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Vishal Ghai</th><td>1810991155</td><td>7027012084</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Jasleen Kaur</th><td>1810991156</td><td>7022348084</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Dhruv Garg</th><td>1810991552</td><td>9427028084</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Riya Gupta</th><td>1810991352</td><td>7027021284</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Sujeet Yadav</th><td>1810996152</td><td>7027978084</td><td><button type="button" class="btn btn-success" id="po">Request Appointment</button></td></tr>
+             <tr><th>Ishika Garg</th><td>1810991156</td><td>7027628084</td><td><button type="button" class="btn btn-success"  id="po">Request Appointment</button></td></tr>
+           </tbody>
+         </table>
+         <div class="modal fade" id="my" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+          <div class="container-fluids" id="part3">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4" id="lss"><h3>For Medical Professionals</h3></div>
+                  <div class="col-lg-4" id="lss"><h3>For Researchers</h3></div>
+                  <div class="col-lg-4" id="lss"><h3>For Students</h3></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Find a doctor</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Find an expert in a research area</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>View degree programs</h5></a></div> 
+                </div>
+                <div class="row">
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Refer a patient</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>View My Hospital lab services</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>View admissions requirements</h5></a></div> 
+                </div>
+                <div class="row">
+                  <div class="col-lg-4" id="lss"><h3>For Job Seekers</h3></div>
+                  <div class="col-lg-4" id="lss"><h3>For My Hospital Faculty and Staff</h3></div>
+                  <div class="col-lg-4" id="lss"><h3>For International Patients</h3></div>
+                </div>
+                 <div class="row">
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>View open positions</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Find a doctor</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Request an appointment</h5></a></div> 
+                </div>
+                <div class="row">
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Working at My Hospital</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Find other career opportunities</h5></a></div>
+                  <div class="col-lg-4" id="lss"><a href=""><font color="white"><b><h5>Financial services</h5></a></div> 
+                </div>
+                <div class="row">
+                  <br><br>
+                </div>
+              </div>
+             </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

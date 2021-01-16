@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Request an Appointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="2.css" rel="stylesheet">
+   <style>
+#mylogo{ width: 180%;
+  height:20%;}
+}
+    </style>
+    <style>
+      .modal.left .modal-dialog,
+  .modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+  }
+
+  .modal.left .modal-content,
+  .modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .modal.left .modal-body,
+  .modal.right .modal-body {
+    padding: 15px 15px 80px;
+  }
+
+/*Left*/
+  .modal.left.fade .modal-dialog{
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+  }
+  
+  .modal.left.fade.in .modal-dialog{
+    left: 0;
+  }
+    </style>
+  </head>
+   <script>
+    function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+$(document).ready(function(){
+$('#menu').click(function(){
+ $("#myModal").modal('show');
+});
+});
+</script>
+  <body>
+    <div class="container" id="b">
+       <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"style=" background-color:black;opacity:0.9;">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="color:white;">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel" style="color:white;">Menu</h4>
+        </div>
+
+        <div class="modal-body">
+         <div class="list-group">
+    <a href="1.html" class="list-group-item" style="background-color:black;color:white;"><span class="glyphicon glyphicon-home"></span> Home</a>
+    <a href="login.html" class="list-group-item" style="background-color:black;color:white;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+    <a href="#" class="list-group-item" style="background-color:black;color:white;"><span class="glyphicon glyphicon-hand-right"></span> About Us!</a>
+  </div>
+        </div>
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+               <div class="row">
+                <div class="col-lg-1">
+                  <center><img src="mayologo.png" id="mylogo"></center>
+                </div>
+                <div class="col-lg-2">
+                <center><h3>★·.·´¯`·.·★ ꎭꌩ ꃅꂦꌗᖘꀤ꓄ꍏ꒒ ★·.·´¯`·.·★</h3></center>
+                </div>
+                <div class="col-lg-1">
+                  <br>
+                  <button type="button" class="btn btn-info" data-toggle="modal" id="menu"><h3>Menu</h3></button>
+                </div>
+                <div class="col-lg-3">
+                  <br>
+                  <br>
+                <input type="text" placeholder="Search.. My Hospital" name="search" id="search">
+      <button type="submit" id="search"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="col-lg-1">
+                 <a href="https://twitter.com/"><img src="twitter.png" height="70px" id="twit"></a>
+                </div>
+                <div class="col-lg-1">
+                  <br>
+                 <a href="https://www.facebook.com/"><img src="facebook.png" height="60px" id="face"></a>
+                </div>
+                <div class="col-lg-1">
+                  <br>
+                  <br>
+                 <a href="https://www.instagram.com/"><img src="insta.png" height="60px" id="insta"></a>
+                </div>
+                <div class="col-lg-2">
+                  <br>
+                  <a href="reqapp.html"><h8>Request an Appointment</h8></a>
+                  <a href="findadoctor.html"><h8>Find a Doctor</h8></a><br>
+                  <a href="payment.html"><h8>Donate For Cancer Patients</h8></a>
+                </div>
+               </div>
+               <div class="container"><h1 id="q"><b>Appointments at My Hospital</b></h1><br><br></div>
+                <div class="container"><h4>My Hospital works with hundreds of insurance companies and is an in-network provider for millions of people. In most cases, My Hospital doesn't require a physician referral. Some insurers require referrals, or may have additional requirements for certain medical care. All appointments are prioritized on the basis of medical need, and the team members who will care for you or your family have the expertise and skills to provide the best care possible.</h4></div>
+                <div class="container">
+                  <h1 id="w">Telephone requests</h1><h2 id="w">&nbsp&nbsp&nbspMy Hospital in Haryana(Yamunanagar)</h2><h3 id="w">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(702)-702 8084(toll-free)</h3><h2 id="w">&nbsp&nbsp&nbspMy Hospital in Punjab(Rajpura)</h2><h3 id="w">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(999)-147 2415</h3><h2 id="w">&nbsp&nbsp&nbspMy Hospital in Delhi(Pitampura)</h2><h3 id="w">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(981)-331 0297(toll-free)</h3><h1 id="w">Online requests</h1><h3 id="w">Request an appointment using our secure online form. Our goal is to contact you by phone within three business days to review your medical and financial information.</h3><a href="reqappform.html" class="btn btn-primary btn-block" style="padding-top:5px;padding-bottom:5px"><h4>Request appointment</h4></a><br><br>
+                </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

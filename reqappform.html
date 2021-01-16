@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Online Doctor Appointment Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+</style>
+<script>
+  $(document).ready(function(){
+    $('#bmod').click(function(){
+      $('#mymod').modal('show');
+    });
+  });
+</script>
+  </head>
+  <body ng-app="">
+             <div class="container-fliud" style="background-image:url('reqappform.jpg');background-repeat:no-repeat;background-size:cover;height:950px;">
+               <br><br><div style="background-color:white;height:850px;width:550px;margin-left: auto; margin-right: auto;opacity:0.8;"><br>
+                 <h2 style="margin-left:20px;">Patients Personal details</h2>
+                 <h5 style="margin-left:20px;"><i>Fill the form below ndicaticating the appoitment type you need. We will get back soon to you for more updates.</i></h5><br><hr style="border: 0.5px solid #b8b894;width:80%;" />
+                 <br>
+                 <table style="margin-left:40px;width:80%;">
+                   <tr><td>Full Name:</td><td><input type="text" style="width:80%;" ng-model="fname"></td></tr>
+                    <tr><td><br>Gender:</td><td><br><select style="width:80%;" ng-model="gen"><option>Mr.</option><option>Mrs.</option><option>Not Willing to disclose</option></select></td></tr>
+                    <tr><td><br>Phone Number:</td><td><br><input type="number" style="width:30%;" placeholder="Area code" ng-model="arc">&nbsp&nbsp&nbsp&nbsp<input type="number" style="width:45%;" placeholder="Phone Number" ng-model="phn"></td></tr>
+                    <tr><td><br>Date of Birth:</td>
+                      <td><br>
+<select style="width:25%">
+                 <option> </option>
+                 <option>January</option>
+                 <option>February</option>
+                 <option>March</option>
+                 <option>April</option>
+                 <option>May</option>
+                 <option>June</option>
+                 <option>July</option>
+                 <option>August</option>
+                 <option>September</option>
+                 <option>October</option>
+                 <option>November</option>
+                 <option>December</option>
+               </select>&nbsp&nbsp&nbsp
+               <select style="width:20%">
+                 <option> </option>
+                 <option>01</option>
+                 <option>02</option>
+                 <option>03</option>
+                 <option>04</option>
+                 <option>05</option>
+                 <option>06</option>
+                 <option>07</option>
+                 <option>08</option>
+                 <option>09</option>
+                 <option>10</option>
+                 <option>11</option>
+                 <option>12</option>
+                 <option>13</option>
+                 <option>14</option>
+                 <option>15</option>
+                 <option>16</option>
+                 <option>17</option>
+                 <option>18</option>
+                 <option>19</option>
+                 <option>20</option>
+                 <option>21</option>
+                 <option>22</option>
+                 <option>23</option>
+                 <option>24</option>
+                 <option>25</option>
+                 <option>26</option>
+                 <option>27</option>
+                 <option>28</option>
+                 <option>29</option>
+                 <option>30</option>
+                 <option>31</option>
+               </select>&nbsp&nbsp&nbsp
+               <select style="width:20%">
+                <option> </option>
+                 <option>2019</option>
+                 <option>2018</option>
+                 <option>2017</option>
+                 <option>2016</option>
+                 <option>2015</option>
+                 <option>2014</option>
+                 <option>2013</option>
+                 <option>2012</option>
+                 <option>2011</option>
+                 <option>2010</option>
+                 <option>2009</option>
+                 <option>2008</option>
+                 <option>2007</option>
+                 <option>2006</option>
+                 <option>2005</option>
+                 <option>2004</option>
+                 <option>2003</option>
+                 <option>2002</option>
+               </select>
+                      </td>
+                    </tr>
+                    <tr><td></td><td><p>Month&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDay&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYear</p></td></tr>
+                    <tr><td><br>Address:</td><td><br><br><input type="text" style="width:80%;"><p>Street Address</p>
+                     <br><input type="text" style="width:30%;">&nbsp&nbsp&nbsp&nbsp<input type="text" style="width:45%;"><p>City&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState/Province</p>
+                    </td></tr>
+                    <tr><td colspan="2"><h3>Appointment Type:</h3></td></tr>
+                    <tr><td colspan="2"><h4>Select which appointment type(s) you require</h4></td></tr>
+                    <tr><td colspan="2"><br><input type="checkbox">&nbsp&nbspCervix checkup</td></td></tr>
+                    <tr><td colspan="2"><input type="checkbox">&nbsp&nbspHeart checkup</td></td></tr>
+                    <tr><td colspan="2"><input type="checkbox">&nbsp&nbspEye checkup</td></td></tr>
+                    <tr><td colspan="2"><input type="checkbox">&nbsp&nbspHearing Test</td></td></tr>
+                    <tr><td colspan="2"><br><center><button type="button" class="btn btn-info" id="bmod">Submit Form</button></center></td></tr>
+                 </table>
+               </div>
+             </div>
+             <div class="modal fade" id="mymod" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Appointment Confirmed Successfully</h4>
+        </div>
+        <div class="modal-body">
+          <p>Thank You {{gen+" "+fname}} for requesting an Appointment</p>
+          <p>We will contact you shortly on your number {{"+"+arc+"-"+phn}}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

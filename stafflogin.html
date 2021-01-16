@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <title>Staff Login</title>
+    <link href="1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+#mylogo{ width:8%;
+  height:8%;}
+#back2{background-image:url("findadoc.png");background-repeat:no-repeat;background-size:cover;opacity:0.9;}
+#part3{background-image:url("map.png");background-repeat:no-repeat;background-size:cover;opacity:0.8;}
+    </style>
+    <script>
+      $(document).ready(function(){
+      $('#b').click(function(){
+        var a=$('#u').val();
+        var b=$('#p').val();
+        if(a==""&&b!="")
+        {
+          $('#d').empty();
+           $('#d1').empty();
+         $('#d').append("<div class='alert alert-warning' style='text-align:left;width:80%;'>Please enter the Username</div>");
+        }
+        if(b==""&&a!="")
+        {
+          $('#d1').empty();
+           $('#d').empty();
+         $('#d1').append("<div class='alert alert-warning' style='text-align:left;width:80%;'>Please enter the Password</div>");
+        }
+        if(a==""&&b=="")
+        {
+          $('#d1').empty();
+          $('#d').empty();
+         $('#d').append("<div class='alert alert-warning' style='text-align:left;width:80%;'>Please enter the Username</div>");
+        $('#d1').append("<div class='alert alert-warning' style='text-align:left;width:80%;'>Please enter the Password</div>");
+        }
+        if(a!=""&&b!="")
+        {
+          $('#d1').empty();
+          $('#d').empty();
+          window.location.href='staffdet.html'; 
+        }
+      });
+      });
+    </script>
+  </head>
+  <body>
+              <center><img src="mayologo.png" id="mylogo"></center>
+              <center><h1 style="color:#adad85;">My Hospital</h1></center>
+             <center><h3 style="color:#adad85;">One account for all My Hospital services</h3></center>
+             <center><h4 style="color:#adad85;">Sign in to Staff Online Services</h4></center><br><br>
+             <center><div style="height:400px;width:450px;border:solid;border-color:#ccccb3;">
+              <br><br>
+                 <h4 style="text-align:left;"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHospital Username:</b></h4>
+                 <input type="text" class="form-control input-md" placeholder="Username" style="width:80%" id="u"></input><div id="d"></div>
+                 <h4 style="text-align:left;"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPassword:</b></h4>
+                 <input type="password" class="form-control input-md" placeholder="Password" style="width:80%" id="p"></input><div id="d1"></div><br>
+                 <button type="button" class="btn btn-info" style="background-color:#002b80;width:80%;height:45px;" id="b"><b>Login</b></button><br><br>
+                 <a href="#" style="color:#adad85;">Need help logging in?</a><br><br>
+                 <a href="#" style="color:#adad85;">Login Using Registered Mobile No.</a>
+             </div></center><br><br><br>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
